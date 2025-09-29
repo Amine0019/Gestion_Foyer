@@ -1,11 +1,10 @@
 package tn.esprit.gestion_foyer.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+
+import java.util.Set;
 
 @Entity
 @Getter
@@ -20,5 +19,12 @@ public class Chambre {
     long idChambre;
     long numeroChambre;
     TypeChambre typeChambre;
+
+
+    @OneToMany
+    Set<Reservation> typeReservation;
+
+    @ManyToOne
+    Bloc typeBloc;
 
 }

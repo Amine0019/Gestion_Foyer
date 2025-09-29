@@ -1,13 +1,11 @@
 package tn.esprit.gestion_foyer.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -25,4 +23,7 @@ public class Etudiant {
     long cin;
     String ecole;
     Date dateNaissance;
+
+    @ManyToMany
+    Set<Reservation> typeReservation;
 }
