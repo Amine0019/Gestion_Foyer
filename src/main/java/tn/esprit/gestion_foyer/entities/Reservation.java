@@ -18,8 +18,7 @@ import java.util.Date;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Reservation {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long idReservation;
+    String idReservation;
     Date anneeUniversitaire;
     boolean estValide;
 }
