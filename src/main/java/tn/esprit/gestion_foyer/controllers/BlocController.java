@@ -23,7 +23,7 @@ public class BlocController {
     }
 
     @DeleteMapping("/deleteBloc")
-    void deleteBloc(@RequestBody long idBloc){
+    void deleteBloc(@RequestParam long idBloc){
          blocService.deleteBloc(idBloc);
     }
 

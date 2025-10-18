@@ -23,7 +23,7 @@ public class EtudiantController {
     }
 
     @DeleteMapping("/deleteEtudiant")
-    void deleteEtudiant(@RequestBody long idEtudiant){
+    void deleteEtudiant(@RequestParam long idEtudiant){
         etudiantService.deleteEtudiant(idEtudiant);
     }
 
@@ -33,7 +33,7 @@ public class EtudiantController {
     }
 
     @GetMapping("/findEtudiant")
-    Etudiant findEtudiant(long idEtudiant){
+    Etudiant findEtudiant(@RequestParam long idEtudiant){
         return etudiantService.findEtudiantById(idEtudiant);
     }
 }

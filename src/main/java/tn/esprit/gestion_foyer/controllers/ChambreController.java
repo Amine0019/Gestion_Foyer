@@ -23,7 +23,7 @@ public class ChambreController {
     }
 
     @DeleteMapping("/deleteChambre")
-    void deleteChambre(@RequestBody long  idChambre){
+    void deleteChambre(@RequestParam long  idChambre){
         chambreService.deleteChambre(idChambre);
     }
 
