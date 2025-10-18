@@ -16,7 +16,7 @@ public class BlocServiceImplement implements  IBlocService{
     }
 
     @Override
-    public void deleteProjet(long id) {
+    public void deleteBloc(long id) {
         blocRepository.deleteById(id);
     }
 
