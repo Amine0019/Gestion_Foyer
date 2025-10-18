@@ -23,7 +23,7 @@ public class FoyerController {
     }
 
     @DeleteMapping("/deleteFoyer")
-    void deleteFoyer(@RequestBody long  idFoyer){
+    void deleteFoyer(@RequestParam long  idFoyer){
         foyerService.deleteFoyer(idFoyer);
     }
 
@@ -37,6 +37,6 @@ public class FoyerController {
         return foyerService.findFoyerById(idFoyer);
     }
 
-    
+
 
 }
