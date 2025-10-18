@@ -22,7 +22,7 @@ public class ChambreController {
         return chambreService.addOrUpdateChambre(chambre);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/deleteChambre")
     void deleteChambre(@RequestBody long  idChambre){
         chambreService.deleteChambre(idChambre);
     }

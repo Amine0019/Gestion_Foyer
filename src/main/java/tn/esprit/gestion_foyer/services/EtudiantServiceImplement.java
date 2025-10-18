@@ -16,8 +16,8 @@ public class EtudiantServiceImplement implements IEtudiantService{
     }
 
     @Override
-    public void deleteEtudiant(Etudiant etudiant) {
-        etudiantRepository.delete(etudiant);
+    public void deleteEtudiant(long id) {
+        etudiantRepository.deleteById(id);
     }
 
     @Override
