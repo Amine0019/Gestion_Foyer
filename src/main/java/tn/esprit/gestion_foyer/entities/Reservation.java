@@ -23,5 +23,9 @@ public class Reservation {
     @ManyToMany(mappedBy = "typeReservation")
     Set<Etudiant> typeEtudiant;
 
+    @ManyToOne
+    @JoinColumn(name = "chambre_id")
+    Chambre chambre;
+
 
 }
