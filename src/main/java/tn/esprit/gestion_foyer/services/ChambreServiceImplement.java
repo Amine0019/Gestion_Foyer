@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import tn.esprit.gestion_foyer.entities.Bloc;
 import tn.esprit.gestion_foyer.entities.Chambre;
+import tn.esprit.gestion_foyer.entities.TypeChambre;
 import tn.esprit.gestion_foyer.repositories.ChambreRepository;
 
 import java.util.List;
@@ -31,4 +32,15 @@ public class ChambreServiceImplement implements  IChambreService{
     public Chambre findChambreById(long id) {
         return chambreRepository.findById(id).get();
     }
+
+    @Override
+    public List<Chambre> findByType(TypeChambre type) {
+        return chambreRepository.findByTypeChambre(type);
+    }
+
+    @Override
+    public Chambre findByNumero(long numero) {
+        return chambreRepository.findByNumeroChambre(numero);
+    }
+
 }

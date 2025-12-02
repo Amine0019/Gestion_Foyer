@@ -13,5 +13,9 @@ public interface IBlocService {
     Bloc addBlocAndAssignFoyer(Bloc bloc, long idFoyer);
     Bloc assignBlocToFoyer(long idBloc, long idFoyer);
     Bloc unassignBlocFromFoyer(long idBloc);
+    List<Bloc> getBlocsSansFoyer();
+    List<Bloc> getBlocsCapaciteSup30();
+    List<Bloc> getBlocsNomCommencePar(String lettre);
+    List<Bloc> getBlocsNomCommenceParEtCapSup(String lettre, int capacite);
 
 }

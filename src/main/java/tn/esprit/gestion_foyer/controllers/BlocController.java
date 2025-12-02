@@ -51,4 +51,24 @@ public class BlocController {
         return blocService.unassignBlocFromFoyer(idBloc);
     }
 
+    @GetMapping("/sansFoyer")
+    public List<Bloc> getBlocsSansFoyer() {
+        return blocService.getBlocsSansFoyer();
+    }
+
+    @GetMapping("/capaciteSup30")
+    public List<Bloc> getBlocsCapaciteSup30() {
+        return blocService.getBlocsCapaciteSup30();
+    }
+
+    @GetMapping("/nomCommencePar")
+    public List<Bloc> getNomCommencePar(@RequestParam String lettre) {
+        return blocService.getBlocsNomCommencePar(lettre);
+    }
+
+    @GetMapping("/nomCommenceParEtCap")
+    public List<Bloc> getNomCommenceParEtCap(@RequestParam String lettre, @RequestParam int capacite) {
+        return blocService.getBlocsNomCommenceParEtCapSup(lettre, capacite);
+    }
+
 }

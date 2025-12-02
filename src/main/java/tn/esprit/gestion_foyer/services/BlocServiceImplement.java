@@ -55,4 +55,24 @@ public class BlocServiceImplement implements  IBlocService{
         bloc.setTypeFoyer(null);
         return blocRepository.save(bloc);
     }
+
+    @Override
+    public List<Bloc> getBlocsSansFoyer() {
+        return blocRepository.findByFoyerIsNull();
+    }
+
+    @Override
+    public List<Bloc> getBlocsCapaciteSup30() {
+        return blocRepository.findByCapaciteBlocGreaterThan(30);
+    }
+
+    @Override
+    public List<Bloc> getBlocsNomCommencePar(String lettre) {
+        return blocRepository.findByNomBlocStartingWith(lettre);
+    }
+
+    @Override
+    public List<Bloc> getBlocsNomCommenceParEtCapSup(String lettre, int capacite) {
+        return blocRepository.findByNomBlocStartingWithAndCapaciteBlocGreaterThan(lettre, capacite);
+    }
 }
