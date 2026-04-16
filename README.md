@@ -251,4 +251,4 @@ Les tests utilisent aussi MySQL via src/test/resources/application.properties.
 
 ---
 
-Si tu veux, je peux aussi te faire une version README orientee "portfolio GitHub" (avec badges, roadmap, captures, et section contribution) en gardant exactement ton code actuel.
+
