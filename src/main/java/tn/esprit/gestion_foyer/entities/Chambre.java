@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -18,13 +19,16 @@ public class Chambre {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long idChambre;
     long numeroChambre;
+    @Enumerated(EnumType.STRING)
     TypeChambre typeChambre;
 
 
-    @OneToMany
-    Set<Reservation> typeReservation;
+    @OneToMany(mappedBy = "chambre")
+    @ToString.Exclude
+    Set<Reservation> typeReservation = new HashSet<>();
 
     @ManyToOne
+    @ToString.Exclude
     Bloc typeBloc;
 
 }

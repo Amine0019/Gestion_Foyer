@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import tn.esprit.gestion_foyer.entities.Chambre;
 import tn.esprit.gestion_foyer.entities.TypeChambre;
 
@@ -13,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 @Service
 @AllArgsConstructor
 @Slf4j
+@Transactional(readOnly = true)
 public class ScheduledTasksService {
 
     private final IChambreService chambreService;

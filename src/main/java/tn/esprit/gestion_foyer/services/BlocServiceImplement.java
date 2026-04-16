@@ -58,7 +58,7 @@ public class BlocServiceImplement implements  IBlocService{
 
     @Override
     public List<Bloc> getBlocsSansFoyer() {
-        return blocRepository.findByFoyerIsNull();
+        return blocRepository.findByTypeFoyerIsNull();
     }
 
     @Override

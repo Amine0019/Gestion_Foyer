@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public interface BlocRepository extends JpaRepository<Bloc,Long> {
     // 3. Blocs non affectés à un foyer
-    List<Bloc> findByFoyerIsNull();
+    List<Bloc> findByTypeFoyerIsNull();
 
     // 4. Blocs avec capacité > 30
     List<Bloc> findByCapaciteBlocGreaterThan(int capacite);
